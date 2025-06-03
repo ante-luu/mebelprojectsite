@@ -85,7 +85,7 @@ opacity: 0.7;
 
 
 }
-.hero__title{
+.header__hero-title{
     color: rgb(255, 255, 255);
 font-family: Montserrat;
 font-size: 64px;
@@ -97,7 +97,7 @@ text-align: left;
 
 
 }
-.hero__subtitle{
+.header__hero-subtitle{
     color: rgb(255, 255, 255);
 font-family: Montserrat;
 font-size: 24px;
@@ -110,7 +110,7 @@ margin-top: 16px;
  margin-bottom: 14px;
 
 }
-.hero__link{
+.header__hero-link{
     color: rgb(255, 255, 255);
     font-family: Montserrat;
     font-size: 16px;
@@ -183,19 +183,19 @@ margin-top: 16px;
 }
 
 
-.hero{
+.header__hero{
     max-width: 765px;
     
    
   
 }
-.hero--index{
+.header__hero--index{
     margin-top: 63px;
 }
-.hero--catalog{
+.header__hero--catalog{
     margin-top: 126px;
 }
-.hero--cart{
+.header__hero--cart{
     margin-top: 126px;
 }
 
@@ -249,17 +249,17 @@ margin-top: 16px;
           
            
         }
-    .hero{
+    .header__hero{
     max-width: 765px;
     margin-top: 60px;
     }
-    .hero--index{
+    .header__hero--index{
         margin-top: 64px;
     }
-    .hero--catalog{
+    .header__hero--catalog{
         margin-top: 126px;
     }
-    .hero--cart {
+    .header__hero--cart {
         max-width: 765px;
         margin-top: 126px;
     }
@@ -357,10 +357,10 @@ text-align: left;
     display: flex;
     gap: 32px;
 }
-.hero--catalog{
+.header__hero--catalog{
     margin-top: 72px;
 }
-.hero__title{
+.header__hero-title{
     color: rgb(255, 255, 255);
     font-family: Montserrat;
     font-size: 48px;
@@ -369,7 +369,7 @@ text-align: left;
     letter-spacing: 0%;
     text-align: center;
 }
-.hero__subtitle{
+.header__hero-subtitle{
     color: rgb(255, 255, 255);
     font-family: Montserrat;
     font-size: 16px;
@@ -378,16 +378,16 @@ text-align: left;
     letter-spacing: 0%;
     text-align: center;
 }
-.hero--index{
+.header__hero--index{
     margin-top: 19px;
     text-align: center;
    
 }
-.hero--cart {
+.header__hero--cart {
 
     margin-top: 72px;
 }
-.hero__link{
+.header__hero-link{
     color: rgb(255, 255, 255);
     font-family: Montserrat;
     font-size: 14px;
