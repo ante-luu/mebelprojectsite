@@ -1,0 +1,40 @@
+*{ margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Montserrat; /* Выберите подходящий шрифт */
+    line-height: 1.6;
+    color: #333;
+}
+
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == desktop {
+        @media screen and (min-width: 1025px) { @content; }
+    }
+    @else if $breakpoint == tablet {
+        @media screen and (min-width: 769px) and (max-width: 1024px) { @content; }
+    }
+    @else if $breakpoint == mobile {
+        @media screen and (max-width: 768px) { @content; }
+    }
+} 
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Убираем лишний пробел под изображениями */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+@import "modal";
+@import "header";
+@import "modal";
+
+

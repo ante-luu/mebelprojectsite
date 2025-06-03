@@ -1,0 +1,406 @@
+.header--index{
+   background-image: url("./images/background/header.jpg");
+   width: 100%;
+   height: 735px;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position:center ;
+}
+.header--catalog{
+   background-image: url("./images/background/catalog-header.jpg");
+   width: 100%;
+   height: 400px;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position:center ;
+}
+.header--cart{
+   background-image: url("./images/background/basket-header.jpg");
+   width: 100%;
+   height: 400px;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position:center ;
+}
+.container{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom : 0.5px solid rgba(255, 255, 255, 0.8);
+    padding-bottom: 18.5px;
+}
+
+.container__search{
+ 
+border: 1px solid rgb(255, 255, 255);
+border-radius: 20px;
+background-color: transparent;
+padding: 10.5px  10.5px ;
+width: 288px;
+padding-left: 32px;
+
+}
+
+ 
+
+.container__search::placeholder{
+color: rgb(255, 255, 255);
+font-family: Montserrat;
+font-size: 16px;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 0%;
+text-align: left;
+box-sizing: border-box;
+opacity: 0.7; 
+
+
+}
+.container__search:hover {
+    outline: none;
+    border-color: #ffffff;
+   
+}
+.container__search:focus {
+    outline: none;
+    border-color: #ffffff;
+   
+}
+    .container__logo{
+    min-width: 198px;
+    min-height: 44px;
+}
+.container__logo-link{
+    min-width: 198px;
+    min-height: 44px;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: 0%;
+    text-align: left;
+     
+
+
+}
+.hero__title{
+    color: rgb(255, 255, 255);
+font-family: Montserrat;
+font-size: 64px;
+font-weight: 600;
+line-height: 70px;
+letter-spacing: 0%;
+text-align: left;
+ margin-left: -3px;
+
+
+}
+.hero__subtitle{
+    color: rgb(255, 255, 255);
+font-family: Montserrat;
+font-size: 24px;
+font-weight: 400;
+line-height: 32px;
+letter-spacing: 0%;
+text-align: left;
+margin-top: 16px;
+ margin-left: -3px;
+ margin-bottom: 14px;
+
+}
+.hero__link{
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-decoration-line: underline;
+}
+.container__nav-list{
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            order: 1;
+            gap: 32px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+              align-items: center;
+            
+          
+           
+        }
+.container__nav-link{
+        color: rgb(255, 255, 255);
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0%;
+        text-align: left;
+        align-items: center; 
+        
+        
+
+}
+
+
+
+@include respond-to(desktop) {
+    .container__mobile{
+        display: none;
+    }
+
+.header{
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 16px;
+    
+}
+
+
+.container__logo{
+    min-width: 198px;
+    min-height: 44px;
+}
+.container__logo-link{
+    min-width: 198px;
+    min-height: 44px;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: 0%;
+    text-align: left;
+     
+
+
+}
+
+
+.hero{
+    max-width: 765px;
+    
+   
+  
+}
+.hero--index{
+    margin-top: 63px;
+}
+.hero--catalog{
+    margin-top: 126px;
+}
+.hero--cart{
+    margin-top: 126px;
+}
+
+
+
+
+
+
+
+
+}
+
+
+@include respond-to(tablet){
+    .header{
+    padding-left: 24px;
+    padding-right: 24px;
+ 
+    
+}
+
+.header--index{
+    height: 735px;
+   
+}
+.header--catalog{
+    height: 400px;
+   
+}
+
+
+.container__mobile{
+    display: none;
+}
+.container{
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.container__nav-list{
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            order: 1;
+            gap: 32px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+              align-items: center;
+            
+          
+           
+        }
+    .hero{
+    max-width: 765px;
+    margin-top: 60px;
+    }
+    .hero--index{
+        margin-top: 64px;
+    }
+    .hero--catalog{
+        margin-top: 126px;
+    }
+    .hero--cart {
+        max-width: 765px;
+        margin-top: 126px;
+    }
+.container__logo{
+    max-width: 99px;
+    max-height: 22px;
+}
+.container__logo-link{
+    min-width: 198px;
+    min-height: 44px;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: 0%;
+    text-align: left;
+     
+
+
+}
+.modal{
+    display: none;
+}
+    
+   
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@include respond-to(mobile) {
+    .header{
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 32px;
+  
+        
+    }
+
+
+    .header--index{
+        height: 735px;
+        background-size: cover;
+        
+        
+      
+       
+       
+    }
+    .container{
+        border-bottom: none;
+        padding-top: 17.5px;
+        padding-bottom: 17.5px;
+    }
+.container__search{
+    display: none;
+}
+
+
+  .container__logo{
+    min-width: 99px;
+    min-height: 22px;
+}
+.container__logo-link{
+    min-width: 99px;
+    min-height: 22px;
+   color: rgb(255, 255, 255);
+font-family: Montserrat;
+font-size: 18px;
+font-weight: 600;
+line-height: 22px;
+letter-spacing: 0%;
+text-align: left;
+     
+
+
+}
+.container__nav-list{
+    display: none;
+}
+.container__mobile{
+    display: flex;
+    gap: 32px;
+}
+.hero--catalog{
+    margin-top: 72px;
+}
+.hero__title{
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 59px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+.hero__subtitle{
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+.hero--index{
+    margin-top: 19px;
+    text-align: center;
+   
+}
+.hero--cart {
+
+    margin-top: 72px;
+}
+.hero__link{
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+   text-align: center;
+    text-decoration-line: underline;
+    }
+
+    .modal{
+        display: none;
+    }
+
+
+}
