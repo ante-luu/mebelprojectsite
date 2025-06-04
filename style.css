@@ -1685,4 +1685,55 @@ a {
     height: 24px;
     fill: #C4C4C4; /* Цвет иконок */
   }
+}
+@media screen and (min-width: 1025px) {
+  .link-box {
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-top: 39px;
+  }
+  .link-box__catalog {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-decoration-line: underline;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .link-box {
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-top: 39px;
+  }
+  .link-box__catalog {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-decoration-line: underline;
+  }
+}
+@media screen and (max-width: 768px) {
+  .link-box {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 36px;
+  }
+  .link-box__catalog {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-decoration-line: underline;
+  }
 }/*# sourceMappingURL=style.css.map */
