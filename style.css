@@ -881,4 +881,178 @@ a {
   gap: initial;
   padding: 0;
   margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu__card {
+  position: relative; /* Родитель для абсолютного позиционирования */
+}
+
+.menu__card-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.menu__card-title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 1025px) {
+  .menu {
+    padding-left: 121px;
+    padding-right: 120px;
+    padding-top: 64px;
+  }
+  .menu__header {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 59px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 32px;
+    margin-left: -3px;
+  }
+  .menu__card-title {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 41px;
+    letter-spacing: 0%;
+    text-align: center;
+    position: absolute;
+    /* font-weight: bold; */
+    /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); */
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  .menu__card-image {
+    display: block;
+    width: 100%;
+    max-height: 415px;
+    height: 100%; /* Добавляем для одинаковой высоты */
+    -o-object-fit: cover;
+       object-fit: cover; /* Сохраняет пропорции изображений */
+  }
+  .menu__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 31px;
+    -moz-column-gap: 32px;
+         column-gap: 32px;
+  }
+  .menu__card--big {
+    grid-column: span 3;
+  }
+  .menu__card--norm {
+    grid-column: span 2;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .menu {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 64px;
+  }
+  .menu__header {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 59px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 32px;
+  }
+  .menu__card-title {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 41px;
+    letter-spacing: 0%;
+    text-align: center;
+    position: absolute;
+    /* font-weight: bold; */
+    /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); */
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  .menu__card-image {
+    display: block;
+    width: 100%;
+    max-height: 268px;
+    height: 100%; /* Добавляем для одинаковой высоты */
+    -o-object-fit: cover;
+       object-fit: cover; /* Сохраняет пропорции изображений */
+  }
+  .menu__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+  }
+  .menu__card--big {
+    grid-column: span 3;
+  }
+  .menu__card--norm {
+    grid-column: span 2;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 32px;
+  }
+  .menu__header {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 32px;
+  }
+  .menu__card-title {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: 0%;
+    text-align: center;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  .menu__card-image--big {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.41;
+  }
+  .menu__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
 }/*# sourceMappingURL=style.css.map */
