@@ -1270,6 +1270,101 @@ a {
   .offer {
     padding-left: 16px;
     padding-right: 16px;
-    padding-top: 64px;
+    padding-top: 32px;
+  }
+  .offer__header {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 32px;
+  }
+  .offer__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 34px;
+  }
+  .offer__title {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+  .offer__description {
+    color: rgb(136, 136, 136);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-top: 11px;
+    margin-bottom: 9px;
+  }
+  .offer__price-box {
+    display: flex;
+    gap: 32px;
+  }
+  .offer__price--new {
+    color: rgb(5, 5, 5);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+  .offer__price--old {
+    color: rgb(136, 136, 136);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-decoration-line: line-through;
+  }
+  .offer__article {
+    grid-column: span 1;
+  }
+  .offer__img-container {
+    position: relative;
+    display: inline-block;
+  }
+  /* Основные стили для контейнера иконок */
+  .offer__link {
+    position: absolute;
+    top: 7px;
+    right: 6px;
+    z-index: 2;
+    display: flex;
+    gap: 14px;
+  }
+  /* Стили для каждой иконки */
+  .offer__link-icon {
+    background: transparent;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  .offer__link-icon:hover {
+    background: transparent;
+    transform: scale(1.4);
+  }
+  /* Стили для SVG внутри иконок */
+  .offer__link-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: #C4C4C4; /* Цвет иконок */
   }
 }/*# sourceMappingURL=style.css.map */
