@@ -1736,4 +1736,292 @@ a {
     text-align: left;
     text-decoration-line: underline;
   }
+}
+@media screen and (min-width: 1025px) {
+  .footer {
+    background-color: #F7F6F6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-top: 64px;
+    padding-top: 32px;
+  }
+  .footer__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 194px;
+  }
+  .footer__info {
+    display: flex;
+    gap: 129px;
+  }
+  .footer__form {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #888888;
+    text-decoration: none;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    transition: 1s;
+  }
+  .footer__title:hover {
+    text-decoration: underline;
+  }
+  .footer__title-form {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #000;
+    margin-bottom: 8px;
+  }
+  .footer__heading {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000;
+    margin-bottom: 7px;
+  }
+  .footer__icons-menu {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 12px;
+  }
+  .footer__icons__social {
+    color: #888888;
+    transition: 1s;
+  }
+  .footer__icons__social:hover {
+    color: #000;
+  }
+  .footer__logo-link {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: 0%;
+    text-align: left;
+    min-width: 198px;
+    min-height: 44px;
+  }
+  .no-bullets-menu {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding-bottom: 8px;
+  }
+  .line {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    color: #888888;
+    gap: 20px;
+  }
+  .footer__input {
+    box-sizing: border-box;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 16px;
+    background: rgb(255, 255, 255);
+    width: 260px;
+    height: 40px;
+    padding-left: 17px;
+    padding-right: 17px;
+    font-family: inherit;
+  }
+  .footer__input::-moz-placeholder {
+    color: rgb(196, 196, 196);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+  .footer__input::placeholder {
+    color: rgb(196, 196, 196);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+  .footer__button {
+    background: rgba(222, 215, 215, 0.41);
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    border-radius: 16px;
+    width: 260px;
+    height: 40px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #000;
+    font-family: inherit;
+    margin-top: 8px;
+    transition: 1s;
+    padding-left: 15px;
+    padding-right: 27px;
+  }
+  .footer__button:hover {
+    background-color: #000;
+    color: #FFFFFF;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .footer {
+    background-color: #F7F6F6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-top: 64px;
+    padding-top: 32px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .footer__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 187px;
+  }
+  .footer__info {
+    display: flex;
+    gap: 129px;
+  }
+  .footer__form {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #888888;
+    text-decoration: none;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    transition: 1s;
+  }
+  .footer__title:hover {
+    text-decoration: underline;
+  }
+  .footer__title-form {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #000;
+    margin-bottom: 8px;
+  }
+  .footer__heading {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000;
+    margin-bottom: 7px;
+  }
+  .footer__icons-menu {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 12px;
+  }
+  .footer__icons__social {
+    color: #888888;
+    transition: 1s;
+  }
+  .footer__icons__social:hover {
+    color: #000;
+  }
+  .footer__logo {
+    display: none;
+  }
+  .footer__logo-link {
+    display: none;
+  }
+  .no-bullets-menu {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding-bottom: 8px;
+  }
+  .line {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    color: #888888;
+    gap: 20px;
+  }
+  .footer__input {
+    box-sizing: border-box;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 16px;
+    background: rgb(255, 255, 255);
+    width: 260px;
+    height: 40px;
+    padding-left: 17px;
+    padding-right: 17px;
+    font-family: inherit;
+  }
+  .footer__input::-moz-placeholder {
+    color: rgb(196, 196, 196);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+  .footer__input::placeholder {
+    color: rgb(196, 196, 196);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+  .footer__button {
+    background: rgba(222, 215, 215, 0.41);
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    border-radius: 16px;
+    width: 260px;
+    height: 40px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #000;
+    font-family: inherit;
+    margin-top: 8px;
+    transition: 1s;
+    padding-left: 15px;
+    padding-right: 27px;
+  }
+  .footer__button:hover {
+    background-color: #000;
+    color: #FFFFFF;
+  }
+}
+@media screen and (max-width: 768px) {
+  .offer {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 65px;
+  }
 }/*# sourceMappingURL=style.css.map */
