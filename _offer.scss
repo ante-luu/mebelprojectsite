@@ -2,11 +2,11 @@
     .offer{
         padding-left: 121px;
         padding-right: 120px;
-        padding-top: 64px;
+        padding-top: 65px;
     }
     .offer__container{
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 32px; 
     }
     .offer__header{
@@ -21,7 +21,7 @@
     }
     .offer__article
     {
-        grid-column: span 4;
+        grid-column: span 1;
     }
     .offer__title{
         color: rgb(0, 0, 0);
@@ -71,7 +71,15 @@
     .offer__img-container {
         position: relative;
         display: inline-block;
+        width: 100%;
     }
+    .offer__img{
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 4px;
+        transition: transform 0.3s ease;
+        }
     
     /* Основные стили для контейнера иконок */
     .offer__link {
