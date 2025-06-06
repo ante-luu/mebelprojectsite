@@ -35,6 +35,14 @@
     /* Убираем отступ у последнего элемента */
     &:last-child {
       margin-right: 0;
+      gap: 14px;
+      color: rgb(0, 0, 0);
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0%;
+        text-align: left;
     }
     
     /* Модификаторы с разными отступами */
@@ -122,6 +130,13 @@
     display: flex;
     flex-direction: column;
     gap: 14px;
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+    text-align: left;
 
 
 &__input {
@@ -335,8 +350,12 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding-top: 61px;
+    
     padding-bottom: 36px;
+}
+.section-select__no-bullets{
+    display: flex;
+    gap: 12px;
 }
 
 
@@ -504,4 +523,15 @@ select::-webkit-list-text {
             background-color: #ffffff !important;
         }
     }
+}
+
+
+
+@include respond-to(tablet){
+    .filtering-form{ 
+    left: -124px;
+
+    }
+
+   
 }

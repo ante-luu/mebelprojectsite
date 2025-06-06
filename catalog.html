@@ -18,7 +18,9 @@
             <input type="text" class="container__search" placeholder="Поиск">
             <nav class="container__nav">
                 <nav class="container__nav-list">
-                    <div class="container__nav-catalog"><a href="catalog.html" class="container__nav-link"  id="catalog-link">Каталог</a></div>
+                    <div class="container__nav-catalog">
+                        <a href="catalog.html" class="container__nav-link"  id="catalog-link">Каталог</a>
+                    </div>
 
                     <div class="container__nav-cart"><a href="cart.html" class="container__nav-link"  id="cart-link">Корзина</a>
                         <div class="modal">
@@ -98,8 +100,8 @@
     </header>
     <main>
         
-        <section class="catalog">
-            <div class="section-select center">
+        <section class="catalog catalog--catalog">
+            <div class="section-select ">
                 <nav class="section-select__no-bullets">
                     <a class="title1" href="index.html">Главная</a>
                     <span class="title1">/</span>
@@ -280,7 +282,7 @@
                     </div>
                 </div>
             </div>
-            <div class="catalog__container">
+            <div class="catalog__container catalog__container--catalog">
                 <article class="catalog__article">
                     <div class="catalog__img-container">
                         <img class="catalog__img" src="images/products/Bed-TATRAN-2.jpg" alt="Bed-TATRAN">
@@ -356,7 +358,7 @@
                     </div>
 
                     <h3 class="catalog__title">Стол MENU</h3>
-                    <p class="catalog__description">Для того чтобы трапезничать было приятно, необходим правильный обеденный стол.</p>
+                    <p class="catalog__description">Европейский дуб - отличается особой прочностью и стабильностью..</p>
                     <div class="catalog__price-box">
                         <p class="catalog__price" >34 000 руб.</p>
                     </div>
@@ -518,7 +520,7 @@
                     </div>
 
                     <h3 class="catalog__title">Стол MENU</h3>
-                    <p class="catalog__description">Для того чтобы трапезничать было приятно, необходим правильный обеденный стол.</p>
+                    <p class="catalog__description">Европейский дуб - отличается особой прочностью и стабильностью.</p>
                     <div class="catalog__price-box">
                         <p class="catalog__price" >34 000 руб.</p>
                     </div>
@@ -605,9 +607,13 @@
                     </div>
 
                 </article>
-                
+                               
             </div>
+            
         </section>
+        <div class="link-box">
+            <a class="link-box__catalog" href="catalog.html">Показать еще</a>
+        </div>
     </main>
     <footer class="footer">
         <div class="footer__logo">

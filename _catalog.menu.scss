@@ -2,8 +2,10 @@
 .catalog{
     padding-left: 120px;
     padding-right: 120px;
-    padding-top: 72px;
+    padding-top: 60px;
 }
+
+
 
 
 
@@ -13,6 +15,13 @@
     row-gap: 53px;
     column-gap: 32px; 
 }
+
+.catalog__container--catalog{
+    row-gap: 58px;
+    -moz-column-gap: 32px;
+    column-gap: 35px;
+}
+
 .catalog__header{
     color: rgb(0, 0, 0);
     font-family: Montserrat;
