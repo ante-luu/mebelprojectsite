@@ -120,6 +120,11 @@ margin-top: 16px;
     text-align: left;
     text-decoration-line: underline;
 }
+.header__hero-link:hover{
+color: rgb(136, 136, 136);
+text-decoration: none;
+}
+
 .container__nav-list{
             list-style: none;
             display: flex;
@@ -397,6 +402,10 @@ text-align: left;
    text-align: center;
     text-decoration-line: underline;
     }
+.header__hero-link:hover{
+        color: rgb(136, 136, 136);
+        text-decoration: none;
+        }
 
     .modal{
         display: none;
