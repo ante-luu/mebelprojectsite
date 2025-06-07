@@ -1507,6 +1507,13 @@ a {
     -moz-column-gap: 32px;
     column-gap: 35px;
   }
+  .catalog__container--catalog {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+    -moz-column-gap: 32px;
+    column-gap: 35px;
+  }
   .catalog__header {
     color: rgb(0, 0, 0);
     font-family: Montserrat;
@@ -1773,6 +1780,7 @@ a {
   color: #888888;
   gap: 20px;
   list-style: none;
+  margin-top: 7px;
 }
 
 .footer__icons__social {
@@ -1787,13 +1795,14 @@ a {
 @media screen and (min-width: 1025px) {
   .footer {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     padding-left: 120px;
     padding-right: 120px;
     margin-top: 64px;
     padding-top: 31px;
     background: #F7F6F6;
-    gap: 102px;
+    gap: 48px;
+    max-width: 100%;
   }
   .footer__item {
     box-sizing: border-box;
@@ -1802,7 +1811,7 @@ a {
     box-sizing: border-box;
   }
   .footer__logo {
-    grid-column: 1/4;
+    grid-column: 1/1;
   }
   .footer__logo-link {
     color: rgb(0, 0, 0);
@@ -1814,10 +1823,11 @@ a {
     text-align: left;
   }
   .footer__content {
-    grid-column: 5/8;
+    grid-column: 3/5;
     display: flex;
     gap: 129px;
     min-width: 325px;
+    margin-left: 15px;
   }
   .footer__heading {
     color: rgb(0, 0, 0);
@@ -1845,10 +1855,12 @@ a {
     list-style: none;
   }
   .footer__form {
-    grid-column: 9/13;
+    grid-column: 6/7;
     text-align: left;
     min-width: 260px;
     box-sizing: border-box;
+    max-width: none;
+    width: 100%;
   }
   .footer__title-form {
     color: rgb(0, 0, 0);
@@ -1859,6 +1871,7 @@ a {
     letter-spacing: 0%;
     text-align: left;
     margin-bottom: 6px;
+    margin-left: 3px;
   }
   .footer__input {
     box-sizing: border-box;
@@ -1870,6 +1883,8 @@ a {
     padding-left: 17px;
     padding-right: 17px;
     font-family: Montserrat;
+    max-width: none;
+    width: 100%;
   }
   .footer__input::-moz-placeholder {
     color: rgb(196, 196, 196);
@@ -1904,8 +1919,10 @@ a {
     font-family: Montserrat;
     margin-top: 8px;
     transition: 1s;
-    padding-left: 15px;
-    padding-right: 27px;
+    padding-left: 17px;
+    padding-right: 22px;
+    max-width: none;
+    width: 100%;
   }
   .footer__button:hover {
     background-color: #000;
@@ -1916,14 +1933,16 @@ a {
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .footer {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(9, 1fr);
     padding-left: 24px;
     padding-right: 24px;
     margin-top: 64px;
     padding-top: 31px;
     background: rgb(247, 246, 246);
-    gap: 105px;
+    gap: 6px;
     box-sizing: border-box;
+    max-width: 100%;
+    overflow: hidden;
   }
   .footer__item {
     box-sizing: border-box;
@@ -1947,10 +1966,12 @@ a {
     text-align: left;
   }
   .footer__content {
-    grid-column: 1/6;
+    grid-column: 1/5;
     display: flex;
-    gap: 134px;
-    min-width: 325px;
+    gap: 0px;
+    min-width: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   .footer__heading {
     color: rgb(0, 0, 0);
@@ -1960,7 +1981,7 @@ a {
     line-height: 29px;
     letter-spacing: 0%;
     text-align: left;
-    margin-bottom: 6px;
+    margin-bottom: 3px;
   }
   .footer__title {
     color: rgb(136, 136, 136);
@@ -1974,15 +1995,15 @@ a {
   .footer__menu {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 7px;
     list-style: none;
   }
   .footer__form {
-    grid-column: 6/13;
+    grid-column: 7/10;
     text-align: left;
-    max-width: 260px;
-    box-sizing: border-box;
-    padding-left: 2px;
+    max-width: none;
+    width: 100%;
+    padding-left: 0px;
   }
   .footer__title-form {
     color: rgb(0, 0, 0);
@@ -1994,6 +2015,13 @@ a {
     text-align: left;
     margin-bottom: 8px;
     text-align: left;
+  }
+  .footer__item {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    padding-right: 5px;
   }
   .footer__icons-menu {
     display: flex;
@@ -2021,6 +2049,8 @@ a {
     padding-left: 17px;
     padding-right: 17px;
     font-family: Montserrat;
+    max-width: none;
+    width: 100%;
   }
   .footer__input::-moz-placeholder {
     color: rgb(196, 196, 196);
@@ -2055,8 +2085,10 @@ a {
     font-family: Montserrat;
     margin-top: 8px;
     transition: 1s;
-    padding-left: 15px;
-    padding-right: 27px;
+    padding-left: 17px;
+    padding-right: 22px;
+    max-width: none;
+    width: 100%;
   }
   .footer__button:hover {
     background-color: #000;
@@ -2075,6 +2107,7 @@ a {
     background: rgb(247, 246, 246);
     gap: 32px;
     box-sizing: border-box;
+    max-width: 100%;
   }
   .footer__item {
     box-sizing: border-box;
