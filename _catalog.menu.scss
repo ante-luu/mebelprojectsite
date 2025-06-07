@@ -250,10 +250,19 @@ transition: transform 0.3s ease;
         padding-right: 16px;
         padding-top: 36px;
     }
+    .catalog--catalog{
+        padding-top: 32px;}
     .catalog__container{
         display: grid;
         grid-template-columns: 1fr;
         row-gap: 33px;
+        -moz-column-gap: 32px;
+        column-gap: 35px;
+    }
+    .catalog__container--catalog{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 32px;
         -moz-column-gap: 32px;
         column-gap: 35px;
     }
@@ -280,7 +289,7 @@ transition: transform 0.3s ease;
         line-height: 22px;
         letter-spacing: 0%;
         text-align: left;
-        margin-top: 3px;
+        margin-top: 9px;
     }
     .catalog__description{
         color: rgb(136, 136, 136);
@@ -290,8 +299,8 @@ transition: transform 0.3s ease;
         line-height: 17px;
         letter-spacing: 0%;
         text-align: left;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: 4px;
+        margin-bottom: 8px;
     }
     .catalog__price-box
     {

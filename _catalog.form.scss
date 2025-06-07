@@ -1077,9 +1077,11 @@ select::-webkit-list-text {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        gap: 36px;
+        gap: 39px;
         box-shadow: 0px 4px 67px -12px rgba(0, 0, 0, 0.32);
         padding: 40px 48px;
+        z-index: 100
+
         
     
     }
@@ -1191,9 +1193,7 @@ select::-webkit-list-text {
         transform: scale(1.1);
         transition: all 0.5s ease;
     }
-    .filtering-form{
-        z-index: 100
-    }
+    
     .filtering-form__range {
         display: flex;
         flex-direction: column;
@@ -1430,6 +1430,7 @@ select::-webkit-list-text {
     .select-filter-box {
         display: flex;
         gap: 10px;
+        margin-top: 17px;
     }
     
     .select-filter {
@@ -1442,6 +1443,7 @@ select::-webkit-list-text {
         font-family: inherit;
         -webkit-tap-highlight-color: transparent;
         user-select: none;
+        order:2;
     
         * {
             -webkit-tap-highlight-color: transparent;
@@ -1496,25 +1498,29 @@ select::-webkit-list-text {
     }
     
     .select-filter1 {
-        font-family: inherit;
         color: rgb(0, 0, 0);
-        font-size: 16px;
+        font-family: Montserrat;
+        font-size: 14px;
         font-weight: 500;
-        line-height: 20px;
+        line-height: 17px;
         letter-spacing: 0%;
         text-align: left;
-        padding-left: 23px;
-        padding-right: 53px;
-        background-image: url("images/list-button.svg");
+        padding-left: 19px;
+        padding-right: 51px;
+        background-image: url(images/list-button.svg);
         background-position: 0%;
-        background-position-x: 140px;
+        background-position-x: 122px;
         background-repeat: no-repeat;
+        -webkit-appearance: none;
+        -moz-appearance: none;
         appearance: none;
-        width: 182px;
+        /* width: 166px; */
         height: 40px;
         border: 1px solid rgb(196, 196, 196);
         border-radius: 20px;
         -webkit-tap-highlight-color: transparent;
+        order: 2;
+    
         
         &:focus {
             outline: none;
@@ -1537,24 +1543,28 @@ select::-webkit-list-text {
     }
     
     .select-filter2 {
-        font-family: inherit;
         color: rgb(0, 0, 0);
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 20px;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
         letter-spacing: 0%;
         text-align: left;
-        padding-left: 23px;
-        padding-right: 53px;
-        background-image: url("images/list-button.svg");
+        padding-left: 17px;
+        padding-right: 54px;
+        background-image: url(images/list-button.svg);
         background-position: 0%;
-        background-position-x: 185px;
+        background-position-x: 162px;
         background-repeat: no-repeat;
+        -webkit-appearance: none;
+        -moz-appearance: none;
         appearance: none;
         height: 40px;
         border: 1px solid rgb(196, 196, 196);
         border-radius: 20px;
         -webkit-tap-highlight-color: transparent;
+        order: 1;
+    
         
         &:focus {
             outline: none;
@@ -1618,7 +1628,7 @@ select::-webkit-list-text {
     ;
         flex-direction: column;
         align-items: flex-end;
-        gap: 32px;
+        gap: 38px;
         box-shadow: 0px 4px 67px -12px rgba(0, 0, 0, 0.32);
         padding: 40px 48px;
     }
@@ -1629,6 +1639,15 @@ select::-webkit-list-text {
         gap: 32px 29px;
         min-height: 468px;
         /* min-width: 445px; */
+    }
+    .title1{
+        color: rgb(0, 0, 0);
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0%;
+        text-align: left;
     }
 
 }
