@@ -116,7 +116,7 @@
     
                                 <h3 class="cart__article-title">Стол MENU</h3>
                                 <p class="cart__article-description">Для того чтобы трапезничать было приятно, необходим правильный обеденный стол.</p>
-                                <p class="cart__article-price" >34 000 руб.</p>
+                                <p class="cart__article-price cart__article-price--second" >34 000 руб.</p>
                                 
                                 <div class="cart__article-link"> 
                                     <a class="cart__link" href="#">Избранные</a>
@@ -125,9 +125,16 @@
                                 </div>
                             </div>
                             <div class="cart__quantity">
-                                <button class="cart__quantity-button cart__quantity-button--decrease">-</button>
+                                
                                 <span class="cart__quantity-value">1</span>
-                                <button class="cart__quantity-button cart__quantity-button--increase">+</button>
+                                <div class="cart__quantity-box">
+                                <svg class="cart__quantity-button cart__quantity-button--decrease" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9L8 7L10 9" stroke="#CACDD8" stroke-width="1.6" stroke-linecap="round"/>
+                                  </svg>
+                                 <svg class="cart__quantity-button cart__quantity-button--increase"width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 7L8 9L6 7" stroke="#CACDD8" stroke-width="1.6" stroke-linecap="round"/>
+                                  </svg>
+                                </div>
                             </div>
                        
                         
@@ -150,9 +157,16 @@
                             </div>
                         </div>
                         <div class="cart__quantity">
-                            <button class="cart__quantity-button cart__quantity-button--decrease">-</button>
+                                
                             <span class="cart__quantity-value">1</span>
-                            <button class="cart__quantity-button cart__quantity-button--increase">+</button>
+                            <div class="cart__quantity-box">
+                            <svg class="cart__quantity-button cart__quantity-button--decrease" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L8 7L10 9" stroke="#CACDD8" stroke-width="1.6" stroke-linecap="round"/>
+                              </svg>
+                             <svg class="cart__quantity-button cart__quantity-button--increase"width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 7L8 9L6 7" stroke="#CACDD8" stroke-width="1.6" stroke-linecap="round"/>
+                              </svg>
+                            </div>
                         </div>
                    
                     
@@ -169,13 +183,42 @@
 
             </div>
             <div class="cart__form">
-                <h3 class="cart__form__heading">Оформление заказа</h3>
-                <div class="cart-form">
-                    <input class="cart-form__input cart-form__input_1" placeholder="Имя Фамилия" type="text" required>
-                    <input class="cart-form__input cart-form__input_2" placeholder="+ 79040008080" type="tel" required>
-                    <input class="cart-form__input cart-form__input_3" placeholder="Адрес доставки" type="text" required>
+                <h3 class="cart__form-heading">Оформление заказа</h3>
+                <div class="cart__form-order">
+                    <div class="cart__form-group">
+                        
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            class="cart__form-input" 
+                            placeholder="Имя Фамилия"
+                        >
+                    </div>
+                   
+                    <div class="cart__form-group">
+                       
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            class="cart__form-input" 
+                            placeholder="+7 904 000 80 80"
+                        >
+                    </div>
+                   
+                    <div class="cart__form-group">
+                        
+                        <input 
+                            type="address" 
+                            id="address" 
+                            name="address" 
+                            class="cart__form-input" 
+                            placeholder="Адрес доставки"
+                        >
+                    </div>
                 </div>
-                <p class="cart__total-price">Итого: 128 000 руб.</p>
+                <p class="cart__form-total">Итого: <b>128 000 руб.</b></p>
                 <a class="cart__button-1 cart__button-1_order" href="cart.html">Оформить заказ</a>
             </div>
 
