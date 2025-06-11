@@ -44,4 +44,67 @@ a {
 @import "catalog.form";
 @import "cart";
 
+/* Стили для старой и новой цены (каталог и спецпредложения) */
+.catalog__price--old, .offer__price--old {
+  text-decoration: line-through;
+  color: #aaa;
+  font-size: 18px;
+  margin-right: 8px;
+}
+.catalog__price--new, .offer__price--new {
+  color: #e53935;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+// Стили для иконок в карточках товаров
+.catalog__link {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.catalog__img-container:hover .catalog__link {
+  opacity: 1;
+}
+
+.catalog__link-icon {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background: #e53935;
+    transform: scale(1.1);
+
+    svg {
+      fill: #fff;
+    }
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: #333;
+    transition: fill 0.3s ease;
+  }
+}
+
+.catalog__link-icon--basket {
+  &:hover {
+    background: #4caf50;
+  }
+}
+
 
