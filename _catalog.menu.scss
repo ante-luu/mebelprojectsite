@@ -259,6 +259,9 @@ transition: transform 0.3s ease;
         -moz-column-gap: 32px;
         column-gap: 35px;
     }
+    .catalog__container--index{
+        row-gap: 36px;
+    }
     .catalog__container--catalog{
         display: grid;
         grid-template-columns: 1fr;
@@ -291,6 +294,12 @@ transition: transform 0.3s ease;
         text-align: left;
         margin-top: 9px;
     }
+    .catalog__title--index{
+        margin-top: 5px;
+    }
+    .catalog__title--big{
+        margin-top: 6px;
+    }
     .catalog__description{
         color: rgb(136, 136, 136);
         font-family: Montserrat;
@@ -301,6 +310,14 @@ transition: transform 0.3s ease;
         text-align: left;
         margin-top: 4px;
         margin-bottom: 8px;
+    }
+    .catalog__description--index{
+        margin-top: 10px;
+        margin-bottom: 9px;
+    } 
+    .catalog__description--big{
+        margin-top: 11px;
+        margin-bottom: 9px;
     }
     .catalog__price-box
     {
