@@ -1,0 +1,64 @@
+[
+  {
+    "id": "1",
+    "name": "Стол MENU",
+    "price": 29000,
+    "oldPrice": 34000,
+    "image": "Table-MENU.jpg",
+    "color": "white",
+    "room": "кухня",
+    "delivery": 3,
+    "isOffer": true
+  },
+  {
+    "id": "2",
+    "name": "Диван NASTAN",
+    "price": 80000,
+    "image": "Sofa-NASTAN.jpg",
+    "color": "yellow",
+    "room": "гостиная",
+    "delivery": 7,
+    "isOffer": false
+  },
+  {
+    "id": "3",
+    "name": "Кровать TATRAN",
+    "price": 120000,
+    "image": "Bed-TATRAN.jpg",
+    "color": "brown",
+    "room": "спальня",
+    "delivery": 5,
+    "isOffer": false
+  },
+  {
+    "id": "4",
+    "name": "Кресло VILORA",
+    "price": 21000,
+    "image": "Armchair-VILORA.jpg",
+    "color": "grey",
+    "room": "гостиная",
+    "delivery": 2,
+    "isOffer": false
+  },
+  {
+    "id": "5",
+    "name": "Стол NORMAN",
+    "price": 40000,
+    "image": "Table-NORMAN.jpg",
+    "color": "black",
+    "room": "кухня",
+    "delivery": 4,
+    "isOffer": false
+  },
+  {
+    "id": "6",
+    "name": "Диван ASKESTA",
+    "price": 54000,
+    "oldPrice": 68000,
+    "image": "Sofa-ASKESTA.jpg",
+    "color": "yellow",
+    "room": "гостиная",
+    "delivery": 6,
+    "isOffer": true
+  }
+] 
