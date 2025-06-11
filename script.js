@@ -52,6 +52,7 @@ function updateCartUI() {
   // Итоговая сумма (например, в корзине)
   let totalEl = document.getElementById('total-amount');
   if (totalEl) totalEl.textContent = getCartTotal().toLocaleString();
+  renderMiniCart();
 }
 
 // Модальное окно корзины
@@ -136,7 +137,29 @@ document.addEventListener('DOMContentLoaded', function () {
   @keyframes cartNotifIn {from{opacity:0;transform:translateY(-20px);}to{opacity:1;transform:translateY(0);}}`;
     document.head.appendChild(style);
   })();
+
+  renderMiniCart();
 });
+
+function cartItemTemplate(item, context = 'main') {
+  // context: 'main' (большая корзина) или 'mini' (мини-корзина)
+  return `
+    <div class="cart__item" data-id="${item.id}">
+      <div class="cart__left">
+        <img src="images/product-basket/${getCartImage(item)}" alt="${item.name}" class="cart__img">
+        <div class="cart__info">
+          <h4 class="cart__header">${item.name}</h4>
+          <span class="cart__price">${(item.price).toLocaleString()} руб.</span>
+          <div class="cart__link-box">
+            <a class="cart__link cart__link--favorite" href="#">Избранное</a>
+            <a class="cart__link cart__link--delete ${context === 'mini' ? 'cart__link--delete-mini' : ''}" href="#">Удалить</a>
+          </div>
+        </div>
+      </div>
+      <input type="number" class="cart__value" value="${item.qty}" min="1" ${context === 'mini' ? 'disabled' : ''}>
+    </div>
+  `;
+}
 
 function renderCartItems() {
   const container = document.getElementById('cart-items');
@@ -147,22 +170,7 @@ function renderCartItems() {
     updateCartUI();
     return;
   }
-  container.innerHTML = cart.map(item => `
-    <div class="cart__item" data-id="${item.id}">
-      <div class="cart__left">
-        <img src="images/product-basket/${getCartImage(item)}" alt="${item.name}" class="cart__img">
-        <div class="cart__info">
-          <h4 class="cart__header">${item.name}</h4>
-          <span class="cart__price">${(item.price).toLocaleString()} руб.</span>
-          <div class="cart__link-box">
-            <a class="cart__link cart__link--favorite" href="#">Избранное</a>
-            <a class="cart__link cart__link--delete" href="#">Удалить</a>
-          </div>
-        </div>
-      </div>
-      <input type="number" class="cart__value" value="${item.qty}" min="1">
-    </div>
-  `).join('');
+  container.innerHTML = cart.map(item => cartItemTemplate(item, 'main')).join('');
   updateCartUI();
 }
 
@@ -220,4 +228,36 @@ if (window.location.pathname.includes('cart.html')) {
     }
   });
   document.addEventListener('DOMContentLoaded', renderCartItems);
+}
+
+function renderMiniCart() {
+  const container = document.getElementById('mini-cart-items');
+  const totalEl = document.getElementById('mini-cart-total');
+  if (!container || !totalEl) return;
+  let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+  if (cart.length === 0) {
+    container.innerHTML = '<div class="modal__item">Корзина пуста</div>';
+    totalEl.textContent = '0';
+    return;
+  }
+  container.innerHTML = cart.map(item => cartItemTemplate(item, 'mini')).join('<hr class="modal__divider">');
+  totalEl.textContent = cart.reduce((sum, item) => sum + item.price * (item.qty || 1), 0).toLocaleString();
+}
+
+// Удаление товара из мини-корзины
+if (typeof window !== 'undefined') {
+  document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('cart__link--delete-mini')) {
+      e.preventDefault();
+      const item = e.target.closest('.cart__item');
+      if (item) {
+        let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+        cart = cart.filter(i => i.id !== item.dataset.id);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        renderCartItems();
+        renderMiniCart();
+        updateCartUI();
+      }
+    }
+  });
 } 

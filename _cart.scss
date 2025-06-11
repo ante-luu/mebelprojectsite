@@ -85,30 +85,30 @@
     max-width: 100%;
     box-sizing: border-box;
     
-  }
+}
   .cart__name-box {
     display: flex;
     justify-content: space-between;
     padding-bottom: 14px;
     padding-left: 3px;
     padding-right: 23px;
-}
+    }
   .cart__quantity-header {
     color: #000000;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
     text-align: left;
-  }
+    }
   .cart__item {
     padding-top: 25px;
     padding-bottom: 32px;
     display: flex;
-    justify-content: space-between;
+        justify-content: space-between;
     align-items: flex-start;
     border: none;
     border-top: 0.5px solid rgb(202, 205, 216);
-  }
+}
   .cart__item--big{
     padding-top: 32px;
     padding-bottom: 47px;
@@ -117,7 +117,7 @@
   .cart__left {
     display: flex;
     gap: 32px;
-  }
+}
   .cart__info {
     width: 276px;
     display: flex;
@@ -256,7 +256,7 @@
     font-weight: 400;
     line-height: 17px;
     text-align: left;
-  }
+}
   .cart__form-input--name{
     min-width: 298px;
     margin-bottom: 11px;
@@ -501,12 +501,12 @@
 }
 .link-box__cart{
     color: rgb(0, 0, 0);
-    font-family: Montserrat;
-    font-size: 16px;
-    font-weight: 400;
+font-family: Montserrat;
+font-size: 16px;
+font-weight: 400;
     line-height: 24px;
     letter-spacing: 0;
-    text-align: left;
+text-align: left;
     text-decoration-line: underline;
     
   }
@@ -550,44 +550,44 @@ line-height: 17px;
 letter-spacing: 0;
 text-align: left;
 padding-right: 10px;
-  }
+}
   .cart__price{
     color: rgb(5, 5, 5);
-    font-family: Montserrat;
+font-family: Montserrat;
     font-size: 12px;
-    font-weight: 500;
+font-weight: 500;
     line-height: 15px;
     letter-spacing: 0;
-    text-align: left;
-  }
-  .cart__link{
+text-align: left;
+}
+.cart__link{
     color: rgb(0, 0, 0);
-    font-family: Montserrat;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 210%;
+font-family: Montserrat;
+font-size: 14px;
+font-weight: 400;
+line-height: 210%;
     letter-spacing: 0;
-    text-align: center;
-    text-decoration-line: underline;
-  }
+text-align: center;
+text-decoration-line: underline;
+}
   .cart__link-box {
-    display: flex;
+        display: flex;
     gap: 32px;
     margin-left: 1px;
-}
+    }
 .cart__value {
     color: #000000;
     font-family: Poppins;
-    font-size: 14px;
+font-size: 14px;
     font-weight: 600;
     line-height: 210%;
-    text-align: center;
+text-align: center;
     border-radius: 6px;
     background: #ffffff;
-    width: 71px;
-    height: 51px;
+            width: 71px;
+            height: 51px;
     border: none;
-    border-radius: 6px;
+            border-radius: 6px;
     background: #f7f6f6;
     padding-right: 33px;
     padding-top: 2px;
@@ -601,7 +601,7 @@ padding-right: 10px;
     line-height: 17px;
     letter-spacing: 0;
     text-align: left;
-  }
+    }
   .cart__button{
     color: rgb(0, 0, 0);
     font-family: Montserrat;
@@ -609,27 +609,27 @@ padding-right: 10px;
     font-weight: 400;
     line-height: 15px;
     letter-spacing: 0;
-    text-align: center;
+        text-align: center;
   }
   .cart__button--action{
     padding-left: 15px;
     padding-right: 13px;
-  }
+    }
   .cart__button--delete{
     padding-left: 25px;
     padding-right: 25px;
-  }
+    }
   .cart__button--loading{
-    color: rgb(0, 0, 0);
-    font-family: Montserrat;
+        color: rgb(0, 0, 0);
+        font-family: Montserrat;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0;
-    text-align: center;
+        text-align: center;
     padding-left: 75px;
     padding-right: 79px;
-  }
+    }
   .cart__button-box {
     display: flex;
     gap: 14px;
@@ -655,7 +655,7 @@ padding-right: 10px;
 }
 .offer__container--cart{
     gap: 36px;
-}
+   }
 .cart__form-title{
     color: #000000;
     font-family: Montserrat;

@@ -24,37 +24,9 @@
 
                     <div class="container__nav-cart"><a href="cart.html" class="container__nav-link"  id="cart-link">Корзина <span id="cart-count"></span></a>
                         <div class="modal">
-                            <div class="modal__item">
-                                <div class="modal__item-product">
-                                    <img src="images/product-basket/Table-MENU.jpg" alt="Стол MENU" class="modal__item-product-info-image">
-                                    <div class="modal__item-product-info">
-                                        <span class="modal__item-product-name">Стол MENU</span>
-                                        <span class="modal__item-product-price">34 000 руб.</span>
-                                        <div class="modal__item-info-link">
-                                            <a href="#" class="modal__item-product-info-box-link-favorite">Избранные</a>
-                                            <a href="#" class="modal__item-product-info-box-link-delete">Удалить</a>
-                                        </div>
-                                    </div>
-                                    <input type="number" class="modal__item-qty-input" value="1" min="1" disabled>
-                                </div>
-                            </div>
-                            <hr class="modal__divider">
-                            <div class="modal__item">
-                                <div class="modal__item-product">
-                                    <img src="images/product-basket/Sofa-NASTAN.jpg" alt="Диван NASTAN" class="modal__item-product-info-image">
-                                    <div class="modal__item-product-info">
-                                        <span class="modal__item-product-name">Диван NASTAN</span>
-                                        <span class="modal__item-product-price">80 000 руб.</span>
-                                        <div class="modal__item-info-link">
-                                            <a href="#" class="modal__item-product-info-box-link-favorite">Избранные</a>
-                                            <a href="#" class="modal__item-product-info-box-link-delete">Удалить</a>
-                                        </div>
-                                    </div>
-                                    <input type="number" class="modal__item-qty-input" value="1" min="1" disabled>
-                                </div>
-                            </div>
+                            <div id="mini-cart-items"></div>
                             <div class="modal__footer">
-                                <span class="modal__footer-total">Итого: <b>114 000 руб.</b></span>
+                                <span class="modal__footer-total">Итого: <b><span id="mini-cart-total"></span> руб.</b></span>
                                 <a href="cart.html" class="modal__button modal__button--outline">Оформить заказ</a>
                             </div>
                         </div>
