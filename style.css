@@ -2366,6 +2366,16 @@ a {
     gap: 36px;
     box-shadow: 0px 4px 67px -12px rgba(0, 0, 0, 0.32);
     padding: 40px 48px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  .filtering-form--open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+    display: flex;
   }
   .filtering-form__content {
     display: flex;

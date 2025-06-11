@@ -43,4 +43,68 @@ fetch('products.json')
     if (offerContainer) {
       offerContainer.innerHTML = products.filter(p => p.isOffer).map(renderProductCard).join('');
     }
-  }); 
+  });
+
+// --- Фильтрация и сортировка ---
+function getFilterValues() {
+  // Цвета
+  const colors = Array.from(document.querySelectorAll('.color-options__checkbox .checkbox__input:checked')).map(cb => cb.id.replace('color-', ''));
+  // Тип комнаты
+  const rooms = Array.from(document.querySelectorAll('input[name="room-type"]:checked')).map(cb => cb.id);
+  // Срок доставки
+  const delivery = document.querySelector('input[name="time"]:checked')?.value;
+  // Цена
+  const minPrice = Number(document.querySelector('.filtering-form__range__input--min')?.value) || 0;
+  const maxPrice = Number(document.querySelector('.filtering-form__range__input--max')?.value) || 100000;
+  return { colors, rooms, delivery, minPrice, maxPrice };
+}
+
+function filterProducts(products, filters) {
+  return products.filter(product => {
+    // Цвет
+    if (filters.colors.length && !filters.colors.includes(product.color)) return false;
+    // Тип комнаты
+    if (filters.rooms.length && !filters.rooms.includes(product.room)) return false;
+    // Срок доставки
+    if (filters.delivery && filters.delivery !== 'no-matter') {
+      if (filters.delivery === 'today' && product.delivery > 0) return false;
+      if (filters.delivery === 'tomorrow' && product.delivery > 1) return false;
+      if (filters.delivery === '3-days' && product.delivery > 3) return false;
+      if (filters.delivery === '7-days' && product.delivery > 7) return false;
+    }
+    // Цена
+    if (product.price < filters.minPrice || product.price > filters.maxPrice) return false;
+    return true;
+  });
+}
+
+function renderFilteredCatalog(products) {
+  const filters = getFilterValues();
+  const filtered = filterProducts(products, filters);
+  const catalogContainer = document.getElementById('catalog');
+  if (catalogContainer) {
+    catalogContainer.innerHTML = filtered.map(renderProductCard).join('');
+  }
+}
+
+// --- Слушатели на фильтры ---
+document.addEventListener('DOMContentLoaded', function () {
+  fetch('products.json')
+    .then(res => res.json())
+    .then(products => {
+      // Рендерим изначально все товары
+      renderFilteredCatalog(products);
+      // Навешиваем слушатели на фильтры
+      document.querySelectorAll('.filtering-form input, .filtering-form select').forEach(el => {
+        el.addEventListener('change', () => renderFilteredCatalog(products));
+      });
+      // Для кнопки "Применить"
+      const applyBtn = document.querySelector('.filtering-form__button');
+      if (applyBtn) {
+        applyBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+          renderFilteredCatalog(products);
+        });
+      }
+    });
+}); 
