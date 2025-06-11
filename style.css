@@ -58,7 +58,8 @@ a {
   border: none;
   background: #faf9f9;
   pointer-events: none;
-  appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
   -moz-appearance: textfield;
 }
 
@@ -213,7 +214,8 @@ a {
 .modal__item-product-info-image {
   width: 144px;
   height: 144px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-left: 7px;
 }
 
@@ -326,6 +328,18 @@ a {
   padding: 10.5px 10.5px;
   width: 288px;
   padding-left: 32px;
+}
+
+.container__search::-moz-placeholder {
+  color: rgb(255, 255, 255);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: left;
+  box-sizing: border-box;
+  opacity: 0.7;
 }
 
 .container__search::placeholder {
@@ -660,7 +674,8 @@ a {
   border: none;
   background: #faf9f9;
   pointer-events: none;
-  appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
   -moz-appearance: textfield;
 }
 
@@ -815,7 +830,8 @@ a {
 .modal__item-product-info-image {
   width: 144px;
   height: 144px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-left: 7px;
 }
 
@@ -949,13 +965,15 @@ a {
     width: 100%;
     max-height: 415px;
     height: 100%; /* Добавляем для одинаковой высоты */
-    object-fit: cover; /* Сохраняет пропорции изображений */
+    -o-object-fit: cover;
+       object-fit: cover; /* Сохраняет пропорции изображений */
   }
   .menu__grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     row-gap: 31px;
-    column-gap: 32px;
+    -moz-column-gap: 32px;
+         column-gap: 32px;
   }
   .menu__card--big {
     grid-column: span 6;
@@ -1001,7 +1019,8 @@ a {
     width: 100%;
     max-height: 268px;
     height: 100%; /* Добавляем для одинаковой высоты */
-    object-fit: cover; /* Сохраняет пропорции изображений */
+    -o-object-fit: cover;
+       object-fit: cover; /* Сохраняет пропорции изображений */
   }
   .menu__grid {
     display: grid;
@@ -1386,7 +1405,8 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 53px;
-    column-gap: 32px;
+    -moz-column-gap: 32px;
+         column-gap: 32px;
   }
   .catalog__container--catalog {
     row-gap: 58px;
@@ -1905,6 +1925,14 @@ a {
     max-width: none;
     width: 100%;
   }
+  .footer__input::-moz-placeholder {
+    color: rgb(196, 196, 196);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0;
+    text-align: left;
+  }
   .footer__input::placeholder {
     color: rgb(196, 196, 196);
     font-size: 12px;
@@ -2063,6 +2091,14 @@ a {
     max-width: none;
     width: 100%;
   }
+  .footer__input::-moz-placeholder {
+    color: rgb(196, 196, 196);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0;
+    text-align: left;
+  }
   .footer__input::placeholder {
     color: rgb(196, 196, 196);
     font-size: 12px;
@@ -2208,6 +2244,14 @@ a {
     padding-left: 17px;
     padding-right: 17px;
     font-family: Montserrat;
+  }
+  .footer__input::-moz-placeholder {
+    color: rgb(196, 196, 196);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0;
+    text-align: left;
   }
   .footer__input::placeholder {
     color: rgb(196, 196, 196);
@@ -2610,7 +2654,9 @@ a {
     gap: 10px;
     font-family: inherit;
     -webkit-tap-highlight-color: transparent;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
   }
   .select-filter * {
     -webkit-tap-highlight-color: transparent;
@@ -2668,7 +2714,9 @@ a {
     background-position: 0%;
     background-position-x: 140px;
     background-repeat: no-repeat;
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     width: 182px;
     height: 40px;
     border: 1px solid rgb(196, 196, 196);
@@ -2687,6 +2735,9 @@ a {
     outline: none;
     box-shadow: none;
   }
+  .select-filter1::-moz-selection {
+    background-color: transparent;
+  }
   .select-filter1::selection {
     background-color: transparent;
   }
@@ -2704,7 +2755,9 @@ a {
     background-position: 0%;
     background-position-x: 185px;
     background-repeat: no-repeat;
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     height: 40px;
     border: 1px solid rgb(196, 196, 196);
     border-radius: 20px;
@@ -2721,6 +2774,9 @@ a {
   .select-filter2:active {
     outline: none;
     box-shadow: none;
+  }
+  .select-filter2::-moz-selection {
+    background-color: transparent;
   }
   .select-filter2::selection {
     background-color: transparent;
@@ -3053,7 +3109,9 @@ a {
     gap: 10px;
     font-family: inherit;
     -webkit-tap-highlight-color: transparent;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
   }
   .select-filter * {
     -webkit-tap-highlight-color: transparent;
@@ -3111,7 +3169,9 @@ a {
     background-position: 0%;
     background-position-x: 140px;
     background-repeat: no-repeat;
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     width: 182px;
     height: 40px;
     border: 1px solid rgb(196, 196, 196);
@@ -3130,6 +3190,9 @@ a {
     outline: none;
     box-shadow: none;
   }
+  .select-filter1::-moz-selection {
+    background-color: transparent;
+  }
   .select-filter1::selection {
     background-color: transparent;
   }
@@ -3147,7 +3210,9 @@ a {
     background-position: 0%;
     background-position-x: 185px;
     background-repeat: no-repeat;
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     height: 40px;
     border: 1px solid rgb(196, 196, 196);
     border-radius: 20px;
@@ -3164,6 +3229,9 @@ a {
   .select-filter2:active {
     outline: none;
     box-shadow: none;
+  }
+  .select-filter2::-moz-selection {
+    background-color: transparent;
   }
   .select-filter2::selection {
     background-color: transparent;
@@ -3494,7 +3562,9 @@ a {
     gap: 10px;
     font-family: inherit;
     -webkit-tap-highlight-color: transparent;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
     order: 2;
   }
   .select-filter * {
@@ -3575,6 +3645,9 @@ a {
     outline: none;
     box-shadow: none;
   }
+  .select-filter1::-moz-selection {
+    background-color: transparent;
+  }
   .select-filter1::selection {
     background-color: transparent;
   }
@@ -3612,6 +3685,9 @@ a {
   .select-filter2:active {
     outline: none;
     box-shadow: none;
+  }
+  .select-filter2::-moz-selection {
+    background-color: transparent;
   }
   .select-filter2::selection {
     background-color: transparent;
@@ -3685,7 +3761,8 @@ a {
 .cart-item__image {
   width: 80px;
   height: 80px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .cart-item__info {
@@ -4346,4 +4423,4 @@ a {
     padding-right: 6px;
     padding-right: 8px;
   }
-}
+}/*# sourceMappingURL=style.css.map */
