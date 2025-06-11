@@ -168,15 +168,23 @@ function renderCartItems() {
 
 // Пример сопоставления id товара и картинки (доработайте по необходимости)
 function getCartImage(item) {
+  // Сопоставление id товара и картинки
   const images = {
-    '1': 'Table-MENU.jpg',
-    '2': 'Sofa-NASTAN.jpg',
-    '3': 'Bed-TATRAN.jpg',
-    '4': 'Armchair-VILORA.jpg',
-    '5': 'Table-NORMAN.jpg',
-    '6': 'Sofa-NASTAN.jpg',
+    '1': 'Table-MENU.jpg', // Стол MENU
+    '2': 'Sofa-NASTAN.jpg', // Диван NASTAN
+    '3': 'Bed-TATRAN.jpg', // Кровать TATRAN
+    '4': 'Armchair-VILORA.jpg', // Кресло VILORA
+    '5': 'Table-NORMAN.jpg', // Стол NORMAN
+    '6': 'Sofa-ASKESTA.jpg', // Диван ASKESTA
+    // Добавьте другие товары по необходимости
   };
-  return images[item.id] || 'Table-MENU.jpg';
+  // Сначала ищем в product-basket, если нет — в products
+  const basketPath = 'images/product-basket/' + (images[item.id] || '');
+  const productsPath = 'images/products/' + (images[item.id] || '');
+  // Проверяем, есть ли файл в product-basket (только для Table-MENU и Sofa-NASTAN)
+  if (['1','2'].includes(item.id)) return images[item.id];
+  // Для остальных — путь из products
+  return images[item.id] ? '../products/' + images[item.id] : 'Table-MENU.jpg';
 }
 
 // Удаление товара

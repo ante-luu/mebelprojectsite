@@ -1491,6 +1491,8 @@ a {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    padding: 0;
+    margin: 0;
   }
   .catalog__link-icon:hover {
     background: transparent;
@@ -1498,9 +1500,12 @@ a {
   }
   /* Стили для SVG внутри иконок */
   .catalog__link-icon svg {
-    width: 24px;
-    height: 24px;
-    fill: #C4C4C4; /* Цвет иконок */
+    width: 24px !important;
+    height: 24px !important;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    fill: #C4C4C4;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -1601,6 +1606,8 @@ a {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    padding: 0;
+    margin: 0;
   }
   .catalog__link-icon:hover {
     background: transparent;
@@ -1608,9 +1615,12 @@ a {
   }
   /* Стили для SVG внутри иконок */
   .catalog__link-icon svg {
-    width: 24px;
-    height: 24px;
-    fill: #C4C4C4; /* Цвет иконок */
+    width: 24px !important;
+    height: 24px !important;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    fill: #C4C4C4;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1732,6 +1742,8 @@ a {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    padding: 0;
+    margin: 0;
   }
   .catalog__link-icon:hover {
     background: transparent;
@@ -1739,9 +1751,12 @@ a {
   }
   /* Стили для SVG внутри иконок */
   .catalog__link-icon svg {
-    width: 24px;
-    height: 24px;
-    fill: #C4C4C4; /* Цвет иконок */
+    width: 24px !important;
+    height: 24px !important;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    fill: #C4C4C4;
   }
 }
 @media screen and (min-width: 1025px) {
