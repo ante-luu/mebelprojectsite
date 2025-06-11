@@ -22,7 +22,7 @@
                         <a href="catalog.html" class="container__nav-link"  id="catalog-link">Каталог</a>
                     </div>
 
-                    <div class="container__nav-cart"><a href="cart.html" class="container__nav-link"  id="cart-link">Корзина</a>
+                    <div class="container__nav-cart"><a href="cart.html" class="container__nav-link"  id="cart-link">Корзина <span id="cart-count"></span></a>
                         <div class="modal">
                             <div class="modal__item">
                                 <div class="modal__item-product">
@@ -105,36 +105,7 @@
                     <p class="cart__quantity-header">Товар</p>
                     <p class="cart__quantity-header">К-во</p>
                 </div>
-                <div class="cart__item">
-                    <div class="cart__left">
-                        <img src="images/product-basket/Table-MENU.jpg" alt="table" class="cart__img">
-                        <div class="cart__info">
-                            <h4 class="cart__header">Стол MENU</h4>
-                            <p class="cart__description">Для того чтобы трапезничать было приятно, необходим правильный обеденный стол.</p>
-                            <span class="cart__price">34 000 руб.</span>
-                            <div class="cart__link-box">
-                                <a class="cart__link cart__link--favorite" href="#">Избранное</a>
-                                <a class="cart__link cart__link--delete" href="#">Удалить</a>
-                            </div>
-                        </div>
-                    </div>
-                    <input type="number" class="cart__value" value="1" min="1">
-                </div>
-                <div class="cart__item cart__item--big">
-                    <div class="cart__left">
-                        <img src="images/product-basket/Sofa-NASTAN.jpg" alt="divan" class="cart__img">
-                        <div class="cart__info">
-                            <h4 class="cart__header">Диван NASTAN</h4>
-                            <p class="cart__description cart__description--big">Модель отличается простотой линий и форм, отсутствием броского декора.</p>
-                            <span class="cart__price cart__price--big">80 000 руб.</span>
-                            <div class="cart__link-box">
-                                <a class="cart__link cart__link--favorite" href="#">Избранное</a>
-                                <a class="cart__link cart__link--delete" href="#">Удалить</a>
-                            </div>
-                        </div>
-                    </div>
-                    <input type="number" class="cart__value" value="1" min="1">
-                </div>
+                <div id="cart-items"></div>
                 <div class="cart__button-box ">
                     <button class="cart__button cart__button--delete">Очистить корзину</button>
                     <a href="#" class="cart__button cart__button--action">Продолжить покупки</a>
@@ -160,10 +131,10 @@
             <h2 class="offer__header">Специальные предложения</h2>
             <div class="offer__container offer__container--cart">
                 <article class="offer__article">
-                    <div class="offer__img-container">
+                    <div class="offer__img-container" data-id="1" data-name="Кровать TATRAN" data-price="120000">
                         <img class="offer__img" src="images/products/Bed-TATRAN-2.jpg" alt="Bed-TATRAN">
                         <div class="offer__link">
-                            <a href="#" class="offer__link-icon offer__link-icon--basket">
+                            <a href="#" class="offer__link-icon offer__link-icon--basket" data-id="1" data-name="Кровать TATRAN" data-price="120000">
                                 <!-- SVG для корзины -->
                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M7 8V6C7 4.67 7.07 2.93 8 2C8.92 1.06 10.68 1 12 1C13.31 1 15.07 1.06 16 2C16.92 2.93 17 4.67 17 6V8H20C20.26 8 20.81 7.81 21 8C21.18 8.18 21 8.73 21 9V21C21 21.26 21.18 21.81 21 22C20.81 22.18 20.26 22 20 22H4C3.73 22 3.18 22.18 3 22C2.81 21.81 3 21.26 3 21V9C3 8.73 2.81 8.18 3 8C3.18 7.81 3.73 8 4 8H7ZM7 10H5V20H19V10H17V12H15V10H9V12H7V10ZM9 8H15V6C15 5.2 14.55 4.56 14 4C13.44 3.43 12.78 3 12 3C11.21 3 10.55 3.43 10 4C9.44 4.56 9 5.2 9 6V8Z"/>
@@ -188,10 +159,10 @@
 
                 </article>
                 <article class="offer__article">
-                    <div class="offer__img-container">
+                    <div class="offer__img-container" data-id="2" data-name="Кресло VILORA" data-price="21000">
                         <img class="offer__img" src="images/products/Armchair-VILORA.jpg" alt="Armchair-VILORA">
                         <div class="offer__link">
-                            <a href="#" class="offer__link-icon offer__link-icon--basket">
+                            <a href="#" class="offer__link-icon offer__link-icon--basket" data-id="2" data-name="Кресло VILORA" data-price="21000">
                                 <!-- SVG для корзины -->
                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M7 8V6C7 4.67 7.07 2.93 8 2C8.92 1.06 10.68 1 12 1C13.31 1 15.07 1.06 16 2C16.92 2.93 17 4.67 17 6V8H20C20.26 8 20.81 7.81 21 8C21.18 8.18 21 8.73 21 9V21C21 21.26 21.18 21.81 21 22C20.81 22.18 20.26 22 20 22H4C3.73 22 3.18 22.18 3 22C2.81 21.81 3 21.26 3 21V9C3 8.73 2.81 8.18 3 8C3.18 7.81 3.73 8 4 8H7ZM7 10H5V20H19V10H17V12H15V10H9V12H7V10ZM9 8H15V6C15 5.2 14.55 4.56 14 4C13.44 3.43 12.78 3 12 3C11.21 3 10.55 3.43 10 4C9.44 4.56 9 5.2 9 6V8Z"/>
@@ -311,5 +282,6 @@
       
         
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
