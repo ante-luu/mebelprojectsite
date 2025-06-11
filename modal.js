@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const filterSelect = document.querySelector('.select-filter1');
   const filterForm = document.querySelector('.filtering-form');
   const applyBtn = document.querySelector('.filtering-form__button');
+  const closeBtn = document.querySelector('.filtering-form__close');
 
   if (!filterSelect || !filterForm) return;
 
@@ -17,6 +18,13 @@ document.addEventListener('DOMContentLoaded', function () {
   if (applyBtn) {
     applyBtn.addEventListener('click', function (e) {
       e.preventDefault();
+      filterForm.classList.remove('filtering-form--open');
+    });
+  }
+
+  // Закрытие по кнопке-крестику
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
       filterForm.classList.remove('filtering-form--open');
     });
   }
