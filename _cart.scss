@@ -101,14 +101,15 @@
     text-align: left;
     }
   .cart__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     padding-top: 25px;
     padding-bottom: 32px;
-    display: flex;
-        justify-content: space-between;
-    align-items: flex-start;
     border: none;
     border-top: 0.5px solid rgb(202, 205, 216);
-}
+    position: relative;
+  }
   .cart__item--big{
     padding-top: 32px;
     padding-bottom: 47px;
@@ -125,57 +126,60 @@
     gap: 14px;
   }
   .cart__header {
-    color: #000000;
+    color: #000;
+    font-family: Montserrat;
     font-size: 24px;
     font-weight: 500;
     line-height: 29px;
     text-align: left;
   }
   .cart__description {
-    color: #888888;
+    color: #888;
+    font-family: Montserrat;
     font-size: 14px;
     font-weight: 400;
     line-height: 17px;
     text-align: left;
   }
   .cart__price {
-    color: #000000;
+    color: #050505;
+    font-family: Montserrat;
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
     text-align: left;
   }
   .cart__link {
-    color: #000000;
+    color: #000;
+    font-family: Montserrat;
     font-size: 14px;
     font-weight: 400;
     line-height: 210%;
     text-align: center;
     text-decoration-line: underline;
+    transition: color 0.2s;
+    &:hover {
+      color: #888;
+      text-decoration: none;
+    }
   }
   .cart__link-box {
     display: flex;
-        gap: 33px;
-        margin-left: 3px;
-  }
-  .cart__link:hover {
-    text-decoration-line: none; /* добавляем подчеркивание */
-    color: #c4c4c4;
+    gap: 30px;
+    margin-left: 3px;
   }
   .cart__value {
-    color: #000000;
-    font-family: Poppins;
+    color: #000;
+    font-family: Poppins, Montserrat, Arial, sans-serif;
     font-size: 14px;
     font-weight: 600;
     line-height: 210%;
     text-align: center;
     border-radius: 6px;
-    background: #ffffff;
+    background: #f7f6f6;
     width: 71px;
     height: 51px;
     border: none;
-    border-radius: 6px;
-    background: #f7f6f6;
     padding-right: 17px;
   }
   .cart__form {
@@ -674,3 +678,147 @@ text-align: center;
 }
 
   }
+
+// --- Корзина: карточка товара ---
+.cart__item--mini {
+  padding: 16px 0;
+  .cart__img {
+    width: 144px;
+    height: 144px;
+  }
+  .cart__header {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .cart__price {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .cart__link-box {
+    gap: 24px;
+  }
+  .cart__description {
+    display: none;
+  }
+}
+.cart__left {
+  display: flex;
+  gap: 32px;
+}
+.cart__img {
+  width: 137px;
+  height: 137px;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #f7f6f6;
+}
+.cart__info {
+  width: 276px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.cart__header {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  text-align: left;
+}
+.cart__description {
+  color: #888;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: left;
+}
+.cart__price {
+  color: #050505;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+}
+.cart__link {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 210%;
+  text-align: center;
+  text-decoration-line: underline;
+  transition: color 0.2s;
+  &:hover {
+    color: #888;
+    text-decoration: none;
+  }
+}
+.cart__link-box {
+  display: flex;
+  gap: 30px;
+  margin-left: 3px;
+}
+.cart__value {
+  color: #000;
+  font-family: Poppins, Montserrat, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 210%;
+  text-align: center;
+  border-radius: 6px;
+  background: #f7f6f6;
+  width: 71px;
+  height: 51px;
+  border: none;
+  padding-right: 17px;
+}
+
+// --- Адаптив ---
+@include respond-to(tablet) {
+  .cart__item {
+    padding-top: 20px;
+    padding-bottom: 24px;
+  }
+  .cart__img {
+    width: 137px;
+    height: 137px;
+  }
+  .cart__header {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .cart__description {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .cart__price {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .cart__link-box {
+    gap: 30px;
+  }
+}
+@include respond-to(mobile) {
+  .cart__img {
+    display: none;
+  }
+  .cart__header {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .cart__description {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .cart__price {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .cart__link-box {
+    gap: 24px;
+  }
+}

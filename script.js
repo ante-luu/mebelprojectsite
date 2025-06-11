@@ -142,21 +142,25 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function cartItemTemplate(item, context = 'main') {
-  // context: 'main' (большая корзина) или 'mini' (мини-корзина)
+  // context: 'main' (корзина), 'mini' (мини-корзина)
+  const isMini = context === 'mini';
+  const isMobile = window.innerWidth <= 600; // для мобильной версии
+  const imgSize = isMini ? 144 : 137;
   return `
-    <div class="cart__item" data-id="${item.id}">
+    <div class="cart__item${isMini ? ' cart__item--mini' : ''}" data-id="${item.id}">
       <div class="cart__left">
-        <img src="images/product-basket/${getCartImage(item)}" alt="${item.name}" class="cart__img">
+        ${!isMini && isMobile ? '' : `<img src="images/product-basket/${item.image || item.img || ''}" alt="${item.name}" class="cart__img" style="width:${imgSize}px;height:${imgSize}px;object-fit:cover;">`}
         <div class="cart__info">
           <h4 class="cart__header">${item.name}</h4>
-          <span class="cart__price">${(item.price).toLocaleString()} руб.</span>
-          <div class="cart__link-box">
+          ${!isMini && isMobile ? '' : `<p class="cart__description${isMini ? '' : ' cart__description--big'}">${item.description || ''}</p>`}
+          <span class="cart__price${isMini ? '' : ' cart__price--big'}">${(item.price).toLocaleString()} руб.</span>
+          <div class="cart__link-box" style="gap:${isMini ? 24 : 30}px;">
             <a class="cart__link cart__link--favorite" href="#">Избранное</a>
-            <a class="cart__link cart__link--delete ${context === 'mini' ? 'cart__link--delete-mini' : ''}" href="#">Удалить</a>
+            <a class="cart__link cart__link--delete${isMini ? ' cart__link--delete-mini' : ''}" href="#">Удалить</a>
           </div>
         </div>
       </div>
-      <input type="number" class="cart__value" value="${item.qty}" min="1" ${context === 'mini' ? 'disabled' : ''}>
+      <input type="number" class="cart__value" value="${item.qty}" min="1" ${isMini ? 'disabled' : ''}>
     </div>
   `;
 }
@@ -240,7 +244,14 @@ function renderMiniCart() {
     totalEl.textContent = '0';
     return;
   }
-  container.innerHTML = cart.map(item => cartItemTemplate(item, 'mini')).join('<hr class="modal__divider">');
+  // Показываем только первые 2 товара, если их больше
+  const showCount = 2;
+  let itemsHtml = cart.slice(0, showCount).map(item => cartItemTemplate(item, 'mini')).join('<hr class="modal__divider">');
+  // Если товаров больше 2, добавляем кнопку
+  if (cart.length > showCount) {
+    itemsHtml += `<button class="mini-cart__show-all" style="margin: 16px auto 0; display: block; width: 90%; padding: 8px 0; border-radius: 8px; border: 1px solid #3fa9f5; background: #f7f6f6; color: #3fa9f5; font-size: 15px; cursor: pointer;" onclick="window.location.href='cart.html'">Показать все товары</button>`;
+  }
+  container.innerHTML = itemsHtml;
   totalEl.textContent = cart.reduce((sum, item) => sum + item.price * (item.qty || 1), 0).toLocaleString();
 }
 
@@ -260,4 +271,6 @@ if (typeof window !== 'undefined') {
       }
     }
   });
-} 
+}
+
+<script src="products.js"></script> 
